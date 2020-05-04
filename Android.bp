@@ -1,0 +1,15 @@
+java_import_host {
+    name: "aspectj.jar",
+    jars: ["lib/aspectjtools.jar"],
+}
+
+java_binary_host {
+    static_libs: [ "aspectj.jar" ],
+    manifest: "manifest.txt",
+    name: "aspectj",
+}
+
+java_import {
+    name: "aspectjrt",
+    jars: ["lib/aspectjrt.jar"],
+}
